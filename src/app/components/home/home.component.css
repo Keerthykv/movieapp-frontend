@@ -1,0 +1,76 @@
+body{
+  background-color: aqua !important;
+}
+.search-container {
+  display: flex;
+  margin: 30px 40px 20px 0px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchbtn{
+  background-color: rgb(255, 106, 0);
+  font-weight: bold;
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--mdc-protected-button-container-elevation, 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12));;
+  padding: 8px 26px;
+  cursor: pointer;
+}
+
+/* Style the search input */
+.search-input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.movie-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.movie-card {
+  background-color: rgb(248, 180, 135);
+  color: rgb(24, 24, 24);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-card h3 {
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie-card button {
+  background-color: rgb(255, 106, 0);
+  font-weight: bold;
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--mdc-protected-button-container-elevation, 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12));;
+  padding: 8px 26px;
+  cursor: pointer;
+}
+
+.movie-card button:hover {
+  background-color: rgb(226, 95, 1);
+}

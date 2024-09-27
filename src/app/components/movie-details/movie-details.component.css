@@ -1,0 +1,111 @@
+
+.movie-detail {
+  padding: 20px;
+  margin: 20px 100px;
+  font-family: Arial, sans-serif;
+  color: whitesmoke;
+}
+
+.theatre-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.theatre-name {
+  flex-grow: 1;
+  width: 70px;
+}
+
+.ticket-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-control button {
+  padding: 5px;
+  background-color: rgb(255, 106, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.confirm{
+  background-color: rgb(255, 106, 0);
+  color: whitesmoke;
+  margin: 20px 10px 10px 10px;
+
+}
+.confirm:disabled{
+  background-color: grey;;
+  cursor: not-allowed;
+  margin: 20px 10px 10px 10px;
+}
+
+.ticket-control button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ticket-limit {
+  margin-left: 10px;
+  color: whitesmoke;
+  flex-grow: 4;
+}
+
+.book-ticket-button {
+  padding: 5px 10px;
+  background-color: rgb(255, 106, 0);
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+
+.seat-selection {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.selected-seats {
+  margin-bottom: 10px;
+}
+
+.seat-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.available-seat {
+  min-width: 15px;
+  text-align: center;
+  background-color: green;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.booked-seat {
+  min-width: 15px;
+  text-align: center;
+  background-color: grey;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+}
+.plus{
+  min-width: 25px;
+}
+.minus{
+  min-width: 25px;
+}

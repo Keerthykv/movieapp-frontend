@@ -1,0 +1,51 @@
+<app-progress-spinner *ngIf="isLoading"></app-progress-spinner>
+<mat-card *ngIf="!isLoading" class="login-card">
+  <mat-card-header class="login-header">
+    <mat-card-title class="login-title">Login</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="login-content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Login id</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter your Login id"
+          id="loginId"
+          formControlName="loginId"
+        />
+        <mat-error *ngIf="loginId?.errors?.['required']"
+          >Login id is required</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Enter your password"
+          id="password"
+          formControlName="password"
+        />
+        <mat-error *ngIf="password?.errors?.['required']"
+          >Password is required</mat-error
+        >
+        <mat-error *ngIf="password?.errors?.['minlength']"
+          >Password must be at least 8 characters long.</mat-error
+        >
+      </mat-form-field>
+
+      <div class="forgot-password">
+        <a routerLink="/forgot-password">Forgot password?</a>
+      </div>
+
+      <button mat-raised-button color="accent" class=" loginbtn full-width">Login</button>
+    </form>
+
+    <div class="signup-link">
+      Don't have an account? <a routerLink="/signup">Sign Up</a>
+    </div>
+  </mat-card-content>
+</mat-card>

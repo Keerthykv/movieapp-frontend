@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+}
+
+.sign-up-card {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 80px;
+}
+
+.sign-up-header {
+  background-color: rgb(255, 106, 0);
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.sign-up-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.addspace{
+  margin-right: 8px;
+}
+.sign-up-content {
+  padding: 24px;
+}
+.signupbtn{
+  background-color: rgb(255, 106, 0) !important;
+}
+.signupbtn :hover{
+  background-color: rgb(226, 95, 1) !important;
+}

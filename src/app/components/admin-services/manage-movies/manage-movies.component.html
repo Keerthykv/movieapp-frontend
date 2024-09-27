@@ -1,0 +1,30 @@
+<app-progress-spinner *ngIf="isLoading"></app-progress-spinner>
+<div class="manage-movies-page" *ngIf="!isLoading">
+  
+    <h2 class="managemoviehead">Manage Movies</h2>
+    <!-- <button mat-raised-button color="primary" routerLink="/admin/add-new-movie">
+      Add Movie
+    </button> -->
+  <div class="movie-list">
+    <div class="movie-card" *ngFor="let movie of movies">
+      <div class="movie-info">
+        
+        <div class="details-container">
+          <h3>{{ movie.moviename }}</h3>
+          <p><strong>Theater</strong> {{ movie.theatre }}</p>
+          <p *ngIf="movie.no_tickets!==0"><strong>No of Tickets:</strong> {{ movie.no_tickets }}</p>
+         <p *ngIf="movie.no_tickets===0"><strong>SOLD OUT</strong></p>
+         
+        </div>
+      </div>
+      <div class="button-container">
+        <button [disabled]="movie.no_tickets===0" mat-icon-button class="manage-btn-del" (click)="deleteMovie(movie.id,movie.moviename)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button [disabled]="movie.no_tickets===0" mat-icon-button class="manage-btn-edit" (click)="editMovie(movie)" >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

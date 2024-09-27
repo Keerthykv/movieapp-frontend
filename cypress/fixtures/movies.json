@@ -1,0 +1,21 @@
+[
+    {
+      "moviename": "Inception",
+      "theatre": "Theatre 1",
+      "no_tickets": 10,
+      "seatsBooked": []
+    },
+    {
+      "moviename": "Avatar",
+      "theatre": "Theatre 2",
+      "no_tickets": 5,
+      "seatsBooked": ["1A", "1B"]
+    },
+    {
+      "moviename": "The Dark Knight",
+      "theatre": "Theatre 3",
+      "no_tickets": 8,
+      "seatsBooked": ["2A", "2B", "3C"]
+    }
+  ]
+  

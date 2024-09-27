@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Edit Movie Details</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editForm">
+    <p>
+      <strong>Movie Name:</strong> {{ data.movie.moviename }}
+    </p>
+    <p>
+      <strong>Theater:</strong> {{ data.movie.theatre }}
+    </p>
+    <mat-form-field appearance="fill">
+      <mat-label>Number of Tickets</mat-label>
+      <input matInput formControlName="no_tickets" type="number">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Seats Booked</mat-label>
+      <input matInput formControlName="seat_no">
+      <mat-error *ngIf="editForm.get('seat_no')?.hasError('seatMismatch')">
+        Number of seats must match the number of tickets.
+      </mat-error>
+      <mat-error *ngIf="editForm.get('seat_no')?.hasError('seatUnavailable')">
+        These seats are already booked: {{data.movie.seatsBooked}}
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-action-btn">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

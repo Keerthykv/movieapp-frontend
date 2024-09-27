@@ -1,0 +1,49 @@
+.login-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 80px;
+}
+
+.login-header {
+  background-color: rgb(255, 106, 0);
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-content {
+  padding: 24px;
+}
+
+.forgot-password {
+  text-align: right;
+  margin: 10px 0px;
+}
+
+.forgot-password a {
+  color: #2b1f1f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: rgb(255, 106, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+.loginbtn{
+  background-color: rgb(255, 106, 0) !important;
+}
+.loginbtn :hover{
+  background-color: rgb(226, 95, 1) !important;
+}

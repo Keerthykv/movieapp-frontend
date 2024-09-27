@@ -1,0 +1,33 @@
+<div class="movie-detail" *ngIf="theatre">
+  <h2>{{ moviename }}</h2>
+  <div *ngFor="let mov of theatre; let i=index">
+    <div class="theatre-item">
+      <span class="theatre-name">{{ mov.theatre }}</span>
+      <div class="ticket-control">
+        <button (click)="decreaseTickets(i)" class="minus" [disabled]="theaterState[i].selectedTickets <= 0">-</button>
+        <span>{{ theaterState[i].selectedTickets || 0 }}</span>
+        <button (click)="increaseTickets(i)" class="plus" [disabled]="theaterState[i].selectedTickets >= mov.no_tickets">+</button>
+      </div>
+      <span class="ticket-limit">Available: {{ mov.no_tickets }}</span>
+      <button mat-raised-button class="book-ticket-button" (click)="toggleSeatSelection(i)" >Book Ticket</button>
+    </div>
+
+    <!-- Seat selection section -->
+    <div *ngIf="selectedTheatreIndex === i" class="seat-selection">
+      <div class="selected-seats">
+        <strong>Selected Seats:</strong> {{ theaterState[i].selectedSeats.join(', ') }}
+      </div>
+      <div class="seat-layout">
+        <div *ngFor="let seat of allSeats[i]" 
+             [ngClass]="{'available-seat': isSeatAvailable(seat, mov.seatsBooked), 'booked-seat': !isSeatAvailable(seat, mov.seatsBooked)}"
+             (click)="isSeatAvailable(seat, mov.seatsBooked) && selectSeat(i, seat)">
+          {{ seat }}
+        </div>
+      </div>
+      <button mat-raised-button [disabled]="theaterState[i].selectedSeats.length<theaterState[i].selectedTickets"  class="confirm" (click)="confirmBooking(i)">Confirm Booking</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoading">
+  <p>Loading...</p>
+</div>

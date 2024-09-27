@@ -1,0 +1,11 @@
+<div class="search-container">
+  <input type="text" placeholder="Search movies..." [(ngModel)]="searchQuery" class="search-input">
+  <button mat-raised-button class="searchbtn" (click)="onSearch()"><mat-icon>search-small</mat-icon>Search</button>
+</div>
+
+<div class="movie-container">
+  <div class="movie-card" *ngFor="let movie of filteredMovies">
+      <h3 >{{ movie.moviename }}</h3>
+    <button class="book-now" (click)="bookNow(movie.moviename)">Book</button>
+  </div>
+</div>

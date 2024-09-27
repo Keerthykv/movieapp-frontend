@@ -1,0 +1,43 @@
+<mat-card class="profile-card">
+  <mat-card-header class="profile-header">
+    <mat-card-title class="profile-title">My Profile</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="profile-content">
+    <div class="profile-info">
+      <div class="profile-field">
+        <span class="profile-label">User ID: </span>
+        <span class="profile-value"><strong>{{ loginId }}</strong></span>
+      </div>
+
+      <div class="profile-field">
+        <span class="profile-label">First Name: </span>
+        <span class="profile-value"><strong>{{ firstName }}</strong></span>
+      </div>
+
+      <div class="profile-field">
+        <span class="profile-label">Last Name: </span>
+        <span class="profile-value"><strong>{{ lastName }}</strong></span>
+      </div>
+
+      <div class="profile-field">
+        <span class="profile-label">Email: </span>
+        <span class="profile-value"><strong>{{ email }}</strong></span>
+      </div>
+
+      <div class="profile-field">
+        <span class="profile-label">Contact number: </span>
+        <span class="profile-value"><strong>{{ contactNumber }}</strong></span>
+      </div>
+    </div>
+
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="/home"
+      class="profilebtn"
+    >
+      Go back to Home
+    </button>
+  </mat-card-content>
+</mat-card>

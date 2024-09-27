@@ -1,0 +1,35 @@
+<mat-toolbar >
+  <span class="header-logo">Movie Booking Site</span>
+  <span class="header-spacer"></span>
+  <button
+  class="loginbtn"
+    mat-raised-button
+    *ngIf="!isLoggedIn"
+    routerLink="login"
+    color="accent"
+  >
+    Login
+  </button>
+  <button
+  class="loginbtn"
+    mat-raised-button
+    *ngIf="isLoggedIn && isAdmin"
+    (click)="onLogout()"
+    color="accent"
+  >
+    Logout
+  </button>
+
+  <!-- Profile Dropdown -->
+  <button mat-icon-button *ngIf="isLoggedIn && !isAdmin" [matMenuTriggerFor]="profileMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #profileMenu="matMenu">
+    <button mat-menu-item routerLink="profile" *ngIf="!isAdmin">Profile</button>
+    <!-- <button mat-menu-item *ngIf="isAdmin" [matMenuTriggerFor]="adminSubMenu">
+      Admin service
+    </button> -->
+    <button mat-menu-item (click)="onLogout()">Logout</button>
+  </mat-menu>
+  
+</mat-toolbar>
